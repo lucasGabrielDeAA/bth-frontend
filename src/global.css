@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f0f5;
+  font: 400 14px Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font: 400 18px Ubuntu, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+form input {
+  border: solid 1px #dcdcd6;
+  border-radius: 8px;
+  color: #333333;
+  height: 60px;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.button {
+  background: #e02041;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 18px;
+  height: 60px;
+  margin-top: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: filter 0.2s;
+  width: 100%;
+}
+
+.button:hover {
+  filter: brightness(90%);
+}
+
+.back-link {
+  align-items: center;
+  color: #41414d;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.back-link svg {
+  margin-right: 8px;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
