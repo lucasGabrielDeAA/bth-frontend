@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FiPower, FiTrash2 } from "react-icons/fi";
 import { toast } from "react-toastify";
 
@@ -10,6 +10,7 @@ import logo from "../../assets/logo.svg";
 import "./styles.css";
 
 export default function Profile() {
+  const history = useHistory();
   const name = localStorage.getItem("ong_name");
   const [incidents, setIncidents] = useState([]);
 
@@ -35,6 +36,12 @@ export default function Profile() {
     }
   }
 
+  async function handleLogout() {
+    await localStorage.clear();
+
+    history.push('/');
+  }
+
   return (
     <div className="profile-container">
       <header>
@@ -44,7 +51,7 @@ export default function Profile() {
         <Link className="button" to="/incidents/new">
           Cadastrar novo caso
         </Link>
-        <button type="button">
+        <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#E02041" />
         </button>
       </header>
