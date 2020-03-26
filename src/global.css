@@ -37,13 +37,15 @@ form input {
 }
 
 .button {
+  align-items: center;
   background: #e02041;
   border: 0;
   border-radius: 8px;
   color: #ffffff;
-  display: inline-block;
+  display: flex;
   font-size: 18px;
   height: 60px;
+  justify-content: center;
   margin-top: 16px;
   text-align: center;
   text-decoration: none;
